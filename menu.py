@@ -1,36 +1,5 @@
 def do_menu (title, choices):
-    """Displays a text menu of choices and returns the user's choice. Loops on
-    invalid choices. All but the last choice are customizeable and are numbered
-    1, 2, and so on. The last choice is always "X. Exit." For example:
 
-        Choose one:
-
-        1. Do something
-        2. Do something else
-        3. Do some other thing
-
-        X. Exit
-
-        Your choice: 
-
-    Parameters:
-
-    - title, a title for the menu meant to indicate its purpose or an
-      instruction for its use. (In the example above, 'Choose one' is
-      the value of title.)
-
-    - choices, a list of strings representing the menu choices. These are
-      presented in order of occurrence in the list. As numbers are generated
-      automatically, these should not appear in the list. (In the example
-      above, ['Do something', 'Do something else', 'Do some other thing']
-      is the value of choices.)
-
-    Returned value:
-
-    - An integer representing the user's choice if the user selects a numbered
-      choice, None if the user selects 'x' or 'X' to exit.
-      
-    """
     while True:
         print('\n' + title + '\n')
         for choice_num in range(len(choices)):
