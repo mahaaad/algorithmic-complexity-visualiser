@@ -6,33 +6,6 @@ def get_file_path_and_name(prompt='Choose a file by number:',
                            dir='.',
                            pattern='*',
                            allow_cd=False):
-    """Provides navigation by numbered menu of a file system. Returns a tuple
-    consisting of a path and a file on that path, if one is selected by the
-    user, or None if the user chooses
-    to exit.
-
-    Parameters:
-
-        prompt (str, default 'Choose a file by number:'): The title appearing
-            at the top of the file-choice menu.
-
-        dir (str, default '.' - the current directory): The starting point
-            directory navigation.
-
-        pattern (str, default '*' - match all filenames): Filename filter
-            (accepts wildcards).
-
-        allow_cd (Boolean, default False): Allow or disallow directory changes.
-
-    Returned values:
-
-        If a file is chosen by the user, a tuple of two strs consisting of
-        the path to the file and the file name (i.e., (<path>, <filename>)).
-
-        Otherwise, returns None (implying the user has chosen to exit the
-        menu).
-            
-    """
     while True:
         filenames = get_filenames(dir, pattern)
         if allow_cd:
